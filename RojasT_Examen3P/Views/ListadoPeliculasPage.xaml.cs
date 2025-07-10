@@ -5,7 +5,7 @@ public partial class ListadoPeliculasPage : ContentPage
     {
         InitializeComponent();
         _db = db;
-    }
+    } 
 
     protected override async void OnAppearing()
     {

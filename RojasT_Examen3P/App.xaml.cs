@@ -1,18 +1,25 @@
-﻿using RojasT_Examen3P.Views;
-using RojasT_Examen3P.Services;
+﻿namespace RojasT_Examen3P;
 
-namespace RojasT_Examen3P
+public partial class App : Application
 {
-    public partial class App : Application
-    {
-        public App()
-        {
-            InitializeComponent();
-        }
+    static PeliculaDatabase database;
 
-        protected override Window CreateWindow(IActivationState? activationState)
+    public static PeliculaDatabase Database
+    {
+        get
         {
-            return new Window(new AppShell());
+            if (database == null)
+            {
+                var path = Path.Combine(FileSystem.AppDataDirectory, "peliculas.db3");
+                database = new PeliculaDatabase(path);
+            }
+            return database;
         }
+    }
+
+    public App()
+    {
+        InitializeComponent();
+        MainPage = new AppShell();
     }
 }
