@@ -7,7 +7,7 @@ public class PeliculaDatabase
 {
     private readonly SQLiteAsyncConnection _database;
 
-    public PeliculaDatabase(string dbPath)
+    public PeliculaDatabase(string dbPath) 
     {
         _database = new SQLiteAsyncConnection(dbPath);
         _database.CreateTableAsync<Pelicula>().Wait();
