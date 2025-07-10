@@ -1,5 +1,6 @@
-﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             Title="Thais Rojas - 01/03/2001"
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RojasT_Examen3P.Views.NuevaPeliculaPage">
     <VerticalStackLayout Padding="20">
         <Entry Placeholder="Título" Text="{Binding Titulo}" />
@@ -9,4 +10,5 @@
         <Button Text="Guardar Película" Command="{Binding GuardarCommand}" />
     </VerticalStackLayout>
 </ContentPage>
+
 
