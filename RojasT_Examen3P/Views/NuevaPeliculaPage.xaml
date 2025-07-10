@@ -1,0 +1,12 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             Title="Thais Rojas - 01/03/2001"
+             x:Class="RojasT_Examen3P.Views.NuevaPeliculaPage">
+    <VerticalStackLayout Padding="20">
+        <Entry Placeholder="Título" Text="{Binding Titulo}" />
+        <Entry Placeholder="Género" Text="{Binding Genero}" />
+        <Entry Placeholder="Año de estreno" Keyboard="Numeric" Text="{Binding AnioEstreno}" />
+        <Entry Placeholder="Calificación (1-10)" Keyboard="Numeric" Text="{Binding Calificacion}" />
+        <Button Text="Guardar Película" Command="{Binding GuardarCommand}" />
+    </VerticalStackLayout>
+</ContentPage>
+
