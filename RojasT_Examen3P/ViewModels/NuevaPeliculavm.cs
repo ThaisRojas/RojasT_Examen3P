@@ -27,9 +27,9 @@ public class NuevaPeliculavm : INotifyPropertyChanged
 
     public event PropertyChangedEventHandler PropertyChanged;
 
-    private async Task Guardar()
+    private async Task Guardar() 
     {
-        if (Calificacion < 3 || AnioEstreno < 2024)
+        if (Calificacion < 3 || AnioEstreno < 2024)  
         {
             await Shell.Current.DisplayAlert ("Error, no se pueden agregar con calificación menor a 3 y año menor a 2024");
             return;

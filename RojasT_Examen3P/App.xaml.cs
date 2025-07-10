@@ -1,4 +1,7 @@
-﻿namespace RojasT_Examen3P
+﻿using RojasT_Examen3P.Views;
+using RojasT_Examen3P.Services;
+
+namespace RojasT_Examen3P
 {
     public partial class App : Application
     {
