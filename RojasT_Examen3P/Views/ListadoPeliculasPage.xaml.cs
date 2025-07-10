@@ -1,3 +1,8 @@
+using RojasT_Examen3P.Services;
+using Microsoft.Maui.Controls;
+
+namespace RojasT_Examen3P.Views;
+
 public partial class ListadoPeliculasPage : ContentPage
 {
     PeliculaDatabase _db;
@@ -5,7 +10,7 @@ public partial class ListadoPeliculasPage : ContentPage
     {
         InitializeComponent();
         _db = db;
-    } 
+    }
 
     protected override async void OnAppearing()
     {

@@ -1,5 +1,5 @@
-﻿using SQLite;
-using RojasT_Examen3P.Models;
+﻿using RojasT_Examen3P.Models;
+using SQLite;
 
 namespace RojasT_Examen3P.Services;
 
@@ -19,5 +19,6 @@ public class PeliculaDatabase
     public Task<int> InsertPeliculaAsync(Pelicula pelicula) =>
         _database.InsertAsync(pelicula);
 }
+
 
 

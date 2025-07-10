@@ -31,7 +31,7 @@ public class NuevaPeliculavm : INotifyPropertyChanged
     {
         if (Calificacion < 3 || AnioEstreno < 2024)  
         {
-            await Shell.Current.DisplayAlert ("Error, no se pueden agregar con calificación menor a 3 y año menor a 2024");
+            await Application.Current.MainPage.DisplayAlert("Error", "Mensaje de error", "Error");
             return;
         }
 
@@ -46,7 +46,7 @@ public class NuevaPeliculavm : INotifyPropertyChanged
         await _db.InsertPeliculaAsync(pelicula);
         File.AppendAllText(_logPath, $"Se incluyó el registro [{pelicula.Titulo}] el {DateTime.Now:dd/MM/yyyy HH:mm}\n");
 
-        await Shell.Current.DisplayAlert("Guardado");
+        await Shell.Current.DisplayAlert("Guardado" , "OK" , "Pelicula Guardada");
 
         Titulo = Genero = string.Empty;
         AnioEstreno = Calificacion = 0;
